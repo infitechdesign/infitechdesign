@@ -6583,7 +6583,9 @@ blockquote cite::before {
     font-size: 31px;
   }
 }
-
+.tp-contact-input{
+  margin-bottom: 20px;
+}
 .tp-contact-input input {
   width: 100%;
   height: 60px;
@@ -6592,8 +6594,12 @@ blockquote cite::before {
   border: 1px solid transparent;
   background-color: var(--tp-grey-2);
   border-radius: 10px;
-  margin-bottom: 30px;
   padding: 0px 20px;
+}
+.error__msg{
+  text-align: left;
+  color: var(--tp-common-pink);
+  margin-top: 3px;
 }
 .tp-contact-input input:focus {
   border: 1px solid var(--tp-theme-2);
