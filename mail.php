@@ -39,7 +39,7 @@
 
         // FIXME: Update this to your desired email address.
 
-        $recipient = "basictheme400@gmail.com";
+        $recipient = "contact@infitechdesign.com";
 
 
 
@@ -51,7 +51,7 @@
 
         //Email Header
 
-        $head = " /// STTHEMES \\\ ";
+        $head = " Enquiry Message";
 
 
 

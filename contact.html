@@ -80,13 +80,13 @@
                      <nav id="mobile-menu">
                         <ul>
                            <li><a href="index.html">Home</a>
-                              <ul class="submenu">
+                              <!-- <ul class="submenu">
                                  <li><a href="index.html">App Landing</a></li>
                                  <li><a href="index-2.html">Saas Landing</a></li>
                                  <li><a href="index-3.html">IT Solution</a></li>
-                              </ul>
+                              </ul> -->
                            </li>
-                           <li><a href="#">Pages</a>
+                           <!-- <li><a href="#">Pages</a>
                               <ul class="submenu">
                                  <li><a href="about-me.html">About Me</a></li>
                                  <li><a href="about-us.html">About Us</a></li>
@@ -107,7 +107,7 @@
                                  <li><a href="project-details.html">Project Details</a></li>
                               </ul>
                            </li>
-                           <li><a href="price.html">Pricing</a></li>
+                           <li><a href="price.html">Pricing</a></li> -->
                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                      </nav>
@@ -254,21 +254,24 @@
                               <h4 class="contact-title">Send us a Message :</h4>
                            </div>
                         </div>
-                        <form action="#">
+                        <form method="post" action="mail.php" id="myform" onsubmit = "return validate();">
                            <div class="row">
                               <div class="col-lg-6 col-md-6 col-12">
                                  <div class="tp-contact-input">
-                                    <input type="text" placeholder="Enter your Name">
+                                    <input type="text" placeholder="Enter your Name" id="name" name="name">
+                                    <div id="name_message" class="error__msg"></div>
                                  </div>
                               </div>
                               <div class="col-lg-6 col-md-6 col-12">
                                  <div class="tp-contact-input">
-                                    <input type="email" placeholder="Enter your Mail">
+                                    <input type="email" placeholder="Enter your Mail" id="email" name="email">
+                                    <div id="email_message" class="error__msg"></div>
                                  </div>
                               </div>
                               <div class="col-lg-6 col-md-6 col-12">
                                  <div class="tp-contact-input">
-                                    <input type="text" placeholder="Enter your Number">
+                                    <input type="text" placeholder="Enter your Number" id="phone">
+                                    <div id="phone_message" class="error__msg"></div>
                                  </div>
                               </div>
                               <div class="col-lg-6 col-md-6 col-12">
@@ -278,7 +281,7 @@
                               </div>
                               <div class="col-12">
                                  <div class="tp-contact-input">
-                                    <textarea placeholder="Type your Message"></textarea>
+                                    <textarea placeholder="Type your Message" id="message" name="message"></textarea>
                                  </div>
                               </div>
                            </div>
@@ -376,7 +379,41 @@
    <script src="assets/js/ajax-form.js"></script>
    <script src="assets/js/main.js"></script>
 
-
+	<script type="text/javascript">
+        function validate(){
+		  var name = document.getElementById("name").value;
+		  var phone = document.getElementById("phone").value;
+		  var email = document.getElementById("email").value;
+		  var company = document.getElementById("message").value;
+		  var error_message = document.getElementById("name_message");
+		  var error_message = document.getElementById("phone_message");
+		  var error_message = document.getElementById("email_message");
+		  var error_message = document.getElementById("company_message");
+		  var text;
+		  if(name.length < 5){
+		    text = "Please Enter valid Name";
+		    name_message.innerHTML = text;
+		    return false;
+		  }
+		  if(email.indexOf("@") == -1 || email.length < 6){
+		    text = "Please Enter valid Email";
+		    email_message.innerHTML = text;
+		    return false;
+		  }
+		  if(isNaN(phone) || phone.length != 10){
+		    text = "Please Enter valid Phone Number";
+		    phone_message.innerHTML = text;
+		    return false;
+		  }
+		  if(company.length < 5){
+		    text = "Please Enter Company Name";
+		    company_message.innerHTML = text;
+		    return false;
+		  }
+		  //alert("Form Submitted Successfully!");
+		  return true;
+		}
+	</script>
 
 </body>
 
