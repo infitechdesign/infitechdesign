@@ -2504,11 +2504,11 @@ input[type=color] {
   opacity: 1;
 }
 .tp-header__logo img {
-  width: 157px;
+  width: auto;
   height: 100%;
 }
 .tp-header__main-menu ul {
-  text-align: center;
+  text-align: left;
   margin-left: 30px;
 }
 @media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -3839,7 +3839,7 @@ input[type=color] {
   height: 70px;
 }
 .tp-service__item {
-  background-color: #1859FF;
+  background-color: var(--bs-white);
   padding: 80px 50px;
   border-radius: 10px;
   max-height: 440px;
@@ -3865,7 +3865,7 @@ input[type=color] {
   border: 1px solid var(--tp-grey-2);
 }
 .tp-service__title-sm {
-  color: var(--tp-common-white);
+  color: var(--tp-theme-1);
   font-weight: 600;
   font-size: 24px;
   margin-bottom: 35px;
@@ -3879,11 +3879,11 @@ input[type=color] {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
-  color: var(--tp-common-white);
+  color: var(--bs-gray-900);
   padding-bottom: 25px;
 }
 .tp-service__link a svg {
-  color: var(--tp-common-white);
+  color: var(--tp-theme-1);
   transition: 0.3s;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
