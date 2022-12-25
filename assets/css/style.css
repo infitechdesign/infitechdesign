@@ -1444,7 +1444,7 @@ input[type=color] {
 }
 
 .theme-bg-3 {
-  background: var(--tp-theme-3);
+  background: var(--tp-theme-1);
 }
 
 .body-overlay {
@@ -3841,7 +3841,7 @@ input[type=color] {
 .tp-service__item {
   background-color: var(--bs-white);
   padding: 80px 50px;
-  border-radius: 10px;
+  border-radius: 30px;
   max-height: 440px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -4407,7 +4407,7 @@ input[type=color] {
   border-radius: 0 0 20px 20px;
 }
 .tp-counter-2__wrapper {
-  border-top: 2px solid #306AFF;
+  border-top: 2px solid #262986;
 }
 .tp-counter-2__icon {
   margin-right: 35px;
@@ -6961,3 +6961,7 @@ blockquote cite::before {
 }
 
 /*# sourceMappingURL=style.css.map */
+/*  New CSS Social icons*/
+.footer-social{
+  flex: auto;
+}
