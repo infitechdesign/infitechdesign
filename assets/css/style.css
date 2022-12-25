@@ -2642,7 +2642,7 @@ input[type=color] {
   padding: 40px 0;
 }
 .tp-header__menu-space {
-  padding-top: 25px;
+  padding-top: 0px;
 }
 .tp-header__right {
   display: flex;
