@@ -17,11 +17,13 @@
 
         $message = trim($_POST["message"]);
 
+        $mobile = trim($_POST["mobile"]);
+
 
 
         // Check that data was sent to the mailer.
 
-        if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if ( empty($name) OR empty($message) OR empty($mobile) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
             // Set a 400 (bad request) response code and exit.
 
@@ -62,6 +64,8 @@
         $email_content .= "Name: $name\n";
 
         $email_content .= "Email: $email\n\n";
+
+        $mobile_content .= "Mobile: $mobile\n\n";
 
         $email_content .= "Message:\n$message\n";
 
