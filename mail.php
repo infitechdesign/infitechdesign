@@ -65,7 +65,7 @@
 
         $email_content .= "Email: $email\n\n";
 
-        $mobile_content .= "Mobile: $mobile\n\n";
+        $email_content .= "Mobile: $mobile\n\n";
 
         $email_content .= "Message:\n$message\n";
 
